@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { faqs, faqCategories } from '@/lib/data/faqs';
 import { ChevronDown } from 'lucide-react';
 
 export default function FAQ() {
@@ -13,88 +12,86 @@ export default function FAQ() {
     );
   };
 
-  const categoryIcons: Record<string, string> = {
-    'General Questions': '🔧',
-    'Pricing & Payment': '💳',
-    'Service Details': '🏠',
-    'Customer Experience': '🤝',
-    'Specialty Services': '⭐'
-  };
+  const faqs = [
+    {
+      id: '1',
+      question: 'What are your service areas?',
+      answer: 'We serve a wide area, including surrounding suburbs. To check if we service your location, reach out to our team and we\'d be happy to assist you.'
+    },
+    {
+      id: '2',
+      question: 'How do you determine pricing for your services?',
+      answer: 'Our pricing is based on the type of service, materials needed, and the overall scope of the job. We always provide transparent, upfront pricing before any work begins—no surprises.\n\nThat said, we never cut corners. Our commitment is to do the job right, with integrity and high-quality workmanship. If you\'re looking for the cheapest option or shortcuts, we may not be the right fit—but if you want it done properly, we\'re your team.'
+    },
+    {
+      id: '3',
+      question: 'How do I get in contact with you?',
+      answer: 'If you\'d like to get scheduled in with us, please fill out our request form. Once we\'ve received the details of what you\'re looking for, we\'ll reach out to discuss next steps.'
+    },
+    {
+      id: '4',
+      question: 'What kind of services do you offer?',
+      answer: 'We offer a wide range of general handyman services including drywall repair, pressure cleaning, gutter cleaning, light electrical and plumbing, appliance installation, smart home setup, rental turnovers, safety upgrades for aging-in-place, and more. We do not perform any licensed, structural, or hazardous work.'
+    },
+    {
+      id: '5',
+      question: 'Are you licensed and insured?',
+      answer: 'In Florida, general handyman work under $2,500 does not require a license. We are fully insured and compliant with Florida regulations. Any work requiring a licensed contractor will be referred appropriately.'
+    },
+    {
+      id: '6',
+      question: 'What forms of payment do you accept?',
+      answer: 'We accept cash, credit/debit cards, Zelle, Venmo, Apple Pay, and business checks (with prior approval). Clients using peer-to-peer apps assume all risks associated with those platforms.'
+    }
+  ];
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-gray-50">
-      <div className="container max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-gray-600">
-            Everything you need to know about our services
-          </p>
-        </div>
+    <section id="faq" className="py-16 bg-white">
+      <div className="container max-w-3xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          Frequently asked questions
+        </h2>
 
-        {/* FAQ Categories */}
-        <div className="space-y-12">
-          {faqCategories.map((category) => {
-            const categoryFaqs = faqs.filter((faq) => faq.category === category);
+        <div className="space-y-4">
+          {faqs.map((faq) => {
+            const isOpen = openItems.includes(faq.id);
 
             return (
-              <div key={category}>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <span className="text-4xl">{categoryIcons[category]}</span>
-                  {category}
-                </h3>
+              <div
+                key={faq.id}
+                className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleItem(faq.id)}
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"
+                >
+                  <span className="font-semibold text-gray-900 pr-4">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`h-5 w-5 text-gray-600 flex-shrink-0 transition-transform ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
 
-                <div className="space-y-4">
-                  {categoryFaqs.map((faq) => {
-                    const isOpen = openItems.includes(faq.id);
-
-                    return (
-                      <div
-                        key={faq.id}
-                        className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-blue-400 hover:shadow-lg transition-all"
-                      >
-                        <button
-                          onClick={() => toggleItem(faq.id)}
-                          className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-blue-50 transition-colors"
-                        >
-                          <span className="font-bold text-gray-900 pr-4 text-lg">
-                            {faq.question}
-                          </span>
-                          <ChevronDown
-                            className={`h-6 w-6 text-blue-600 flex-shrink-0 transition-transform ${
-                              isOpen ? 'rotate-180' : ''
-                            }`}
-                          />
-                        </button>
-
-                        {isOpen && (
-                          <div className="px-8 pb-6 text-gray-700 leading-relaxed text-base bg-blue-50/50">
-                            {faq.answer}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
+                {isOpen && (
+                  <div className="px-6 pb-4 text-gray-700 leading-relaxed whitespace-pre-line">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-12 shadow-2xl">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Still Have Questions?
-          </h3>
-          <p className="text-blue-100 text-lg mb-8">
-            We're here to help! Contact us and we'll get back to you right away.
-          </p>
+        <div className="mt-12 text-center">
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl font-semibold text-lg"
+            className="inline-block px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold shadow-md"
           >
-            Contact Us
+            Get an Estimate
           </a>
         </div>
       </div>

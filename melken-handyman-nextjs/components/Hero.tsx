@@ -1,46 +1,38 @@
 'use client';
 
-import { Phone } from 'lucide-react';
-
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 md:py-20">
-      <div className="container flex flex-col md:flex-row items-center gap-8">
-        {/* Content */}
-        <div className="flex-1 max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Dependable Handyman Help
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Serving Seminole County & Orange County, Florida
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="tel:4075020253"
-              className="inline-block px-6 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold"
-            >
-              Call (407) 502-0253
-            </a>
-            <a
-              href="#contact"
-              className="inline-block px-6 py-3 bg-transparent text-primary border-2 border-primary rounded-md hover:bg-primary hover:text-white transition-colors font-semibold"
-            >
-              Request Service
-            </a>
+    <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 md:py-28">
+      <div className="container text-center">
+        {/* Google Rating Badge */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+              </svg>
+            ))}
           </div>
+          <span className="text-gray-700 font-semibold">5.0</span>
         </div>
 
-        {/* Hero Image */}
-        <div className="flex-1 max-w-xl">
-          <img
-            src="/hero-image.jpg"
-            alt="Professional handyman services"
-            className="w-full h-auto rounded-lg shadow-lg object-cover"
-            style={{ maxHeight: '500px' }}
-          />
-        </div>
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Dependable handyman help from a<br />veteran-owned business built on<br />craftsmanship and trust.
+        </h1>
+
+        {/* Service Areas */}
+        <p className="text-lg md:text-xl text-gray-600 mb-8">
+          Seminole County, Florida | Orange County, Florida
+        </p>
+
+        {/* CTA Button */}
+        <a
+          href="#contact"
+          className="inline-block px-8 py-4 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-lg shadow-md"
+        >
+          Get an Estimate
+        </a>
       </div>
     </section>
   );

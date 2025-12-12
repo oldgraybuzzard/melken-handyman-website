@@ -18,62 +18,65 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-blue-100">
+    <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/melken-logo.png"
               alt="Melken Handyman Solutions"
-              width={200}
-              height={70}
-              className="h-16 w-auto"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-700 hover:text-blue-600 font-semibold text-lg transition-colors relative group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="tel:4075020253" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              (407) 502-0253
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold"
+            >
+              Get an Estimate
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-3 hover:bg-gray-100 rounded-lg transition-colors"
+            className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
-              <X className="h-7 w-7 text-gray-700" />
+              <X className="h-6 w-6 text-gray-700" />
             ) : (
-              <Menu className="h-7 w-7 text-gray-700" />
+              <Menu className="h-6 w-6 text-gray-700" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden py-6 border-t-2 border-gray-100">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block py-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-semibold text-lg px-4 rounded-lg transition-all"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+          <nav className="md:hidden py-4 border-t border-gray-200">
+            <a
+              href="tel:4075020253"
+              className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              (407) 502-0253
+            </a>
+            <a
+              href="#contact"
+              className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Get an Estimate
+            </a>
           </nav>
         )}
       </div>
