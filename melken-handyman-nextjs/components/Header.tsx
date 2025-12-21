@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const jobberFormUrl = 'https://clienthub.getjobber.com/client_hubs/b44c6628-bedb-4fef-ba53-8a664d11ed6f/public/work_request/new?form_id=1957366';
 
   const navLinks = [
     { href: '#services', label: 'Services' },
@@ -46,7 +47,9 @@ export default function Header() {
               (407) 502-0253
             </a>
             <a
-              href="#contact"
+              href={jobberFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold text-lg"
             >
               Get an Estimate
@@ -88,7 +91,9 @@ export default function Header() {
               (407) 502-0253
             </a>
             <a
-              href="#contact"
+              href={jobberFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block py-4 text-primary font-semibold px-4 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >

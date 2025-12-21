@@ -3,6 +3,7 @@
 import Image from 'next/image';
 
 export default function Hero() {
+  const jobberFormUrl = 'https://clienthub.getjobber.com/client_hubs/b44c6628-bedb-4fef-ba53-8a664d11ed6f/public/work_request/new?form_id=1957366';
   return (
     <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 md:py-28">
       <div className="container">
@@ -33,7 +34,9 @@ export default function Hero() {
 
             {/* CTA Button */}
             <a
-              href="#contact"
+              href={jobberFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-10 py-5 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-xl shadow-md"
             >
               Get an Estimate
