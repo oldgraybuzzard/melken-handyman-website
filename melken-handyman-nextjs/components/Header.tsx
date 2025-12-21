@@ -10,9 +10,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '#services', label: 'Services' },
-    { href: '#gallery', label: 'Gallery' },
     { href: '#reviews', label: 'Reviews' },
-    { href: '#about', label: 'About' },
     { href: '#faq', label: 'FAQ' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -34,7 +32,16 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-primary font-medium transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
             <a href="tel:4075020253" className="text-gray-700 hover:text-primary font-medium transition-colors">
               (407) 502-0253
             </a>
@@ -48,7 +55,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -62,7 +69,17 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200">
+          <nav className="lg:hidden py-4 border-t border-gray-200">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="tel:4075020253"
               className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
@@ -72,7 +89,7 @@ export default function Header() {
             </a>
             <a
               href="#contact"
-              className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+              className="block py-3 text-primary font-semibold px-4"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get an Estimate
