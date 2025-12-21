@@ -49,19 +49,21 @@
   }
 }
 
-/* Jobber Form Styling - Make iframe scale larger */
+/* Jobber Form Styling - Make iframe scale larger with proper spacing */
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 {
   width: 100% !important;
-  min-height: 1600px !important;
+  position: relative !important;
   overflow: visible !important;
-  padding-bottom: 200px !important;
 }
 
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 iframe {
   width: 100% !important;
-  min-height: 1200px !important;
+  min-height: 1000px !important;
   transform: scale(1.3) !important;
   transform-origin: top center !important;
+  /* Account for the 30% scale increase in height */
+  /* If iframe is 1000px, scaled to 1300px, we need 300px extra space */
+  margin-bottom: 30% !important;
 }
 
 /* Try to style form contents if accessible */
