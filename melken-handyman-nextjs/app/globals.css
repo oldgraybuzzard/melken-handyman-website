@@ -49,47 +49,15 @@
   }
 }
 
-/* Jobber Form Styling - Make iframe scale larger with proper spacing */
+/* Jobber Form Styling - Wider container, no scaling */
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 {
   width: 100% !important;
-  position: relative !important;
-  overflow: visible !important;
+  min-height: 1000px !important;
+  font-size: 20px !important;
 }
 
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 iframe {
   width: 100% !important;
   min-height: 1000px !important;
-  transform: scale(1.3) !important;
-  transform-origin: top center !important;
-  /* Account for the 30% scale increase in height */
-  /* If iframe is 1000px, scaled to 1300px, we need 300px extra space */
-  margin-bottom: 30% !important;
-}
-
-/* Try to style form contents if accessible */
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 input,
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 textarea,
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 select {
-  font-size: 18px !important;
-  padding: 14px 16px !important;
-  min-height: 50px !important;
-  line-height: 1.6 !important;
-}
-
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 label {
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  margin-bottom: 8px !important;
-}
-
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 button,
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 input[type="submit"] {
-  font-size: 20px !important;
-  padding: 16px 32px !important;
-  min-height: 56px !important;
-  font-weight: 600 !important;
-}
-
-#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 textarea {
-  min-height: 150px !important;
+  border: none !important;
 }
