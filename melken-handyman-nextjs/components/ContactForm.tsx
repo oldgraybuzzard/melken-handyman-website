@@ -38,18 +38,21 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <section id="contact" className="py-16 bg-white">
-      <div className="container max-w-6xl">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-gray-900">
+    <section id="contact" className="py-20 bg-white">
+      <div className="container">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-gray-900">
           Get an Estimate
         </h2>
-        <p className="text-center text-gray-600 text-xl mb-12">
+        <p className="text-center text-gray-600 text-xl md:text-2xl mb-16">
           Fill out the form below and we'll get back to you shortly
         </p>
 
-        {/* Jobber Embedded Form */}
-        <div className="bg-gray-50 rounded-lg p-6 md:p-8">
-          <div id="b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366"></div>
+        {/* Jobber Embedded Form - Full Width */}
+        <div className="max-w-5xl mx-auto">
+          <div
+            id="b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366"
+            className="min-h-[800px]"
+          ></div>
         </div>
       </div>
     </section>
