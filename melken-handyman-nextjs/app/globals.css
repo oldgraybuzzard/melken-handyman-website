@@ -49,4 +49,20 @@
   }
 }
 
+/* Jobber Embedded Form Styling - Keep users on site */
+.jobber-form-container {
+  width: 100% !important;
+  min-height: 1000px !important;
+}
+
+#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 {
+  width: 100% !important;
+}
+
+#b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 iframe {
+  width: 100% !important;
+  min-height: 1000px !important;
+  border: none !important;
+}
+
 
