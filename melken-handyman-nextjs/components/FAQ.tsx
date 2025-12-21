@@ -47,8 +47,8 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-16 bg-white">
-      <div className="container max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+      <div className="container max-w-4xl">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-gray-900">
           Frequently asked questions
         </h2>
 
@@ -63,20 +63,20 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"
+                  className="w-full px-8 py-5 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"
                 >
-                  <span className="font-semibold text-gray-900 pr-4">
+                  <span className="font-semibold text-gray-900 pr-4 text-xl">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 text-gray-600 flex-shrink-0 transition-transform ${
+                    className={`h-6 w-6 text-gray-600 flex-shrink-0 transition-transform ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-4 text-gray-700 leading-relaxed whitespace-pre-line">
+                  <div className="px-8 pb-5 text-gray-700 text-lg leading-relaxed whitespace-pre-line">
                     {faq.answer}
                   </div>
                 )}
@@ -89,7 +89,7 @@ export default function FAQ() {
         <div className="mt-12 text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold shadow-md"
+            className="inline-block px-10 py-5 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold text-xl shadow-md"
           >
             Get an Estimate
           </a>

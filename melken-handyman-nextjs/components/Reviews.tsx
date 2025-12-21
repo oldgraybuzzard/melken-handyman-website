@@ -108,23 +108,23 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-16 bg-gray-50">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-gray-900">
           What Our Customers Say
         </h2>
 
         {/* Google Rating Badge */}
         <div className="flex items-center justify-center gap-4 mb-12">
-          <div className="flex items-center gap-2">
-            <span className="text-4xl font-bold text-gray-900">{rating.toFixed(1)}</span>
+          <div className="flex items-center gap-3">
+            <span className="text-5xl font-bold text-gray-900">{rating.toFixed(1)}</span>
             <div>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                  <svg key={i} className="w-7 h-7 text-yellow-400 fill-current" viewBox="0 0 20 20">
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
               </div>
-              <p className="text-sm text-gray-600 mt-1">Based on {totalReviews}+ Google Reviews</p>
+              <p className="text-lg text-gray-600 mt-1">Based on {totalReviews}+ Google Reviews</p>
             </div>
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function Reviews() {
               </div>
 
               {/* Review Text */}
-              <p className="text-gray-700 leading-relaxed">{review.text}</p>
+              <p className="text-lg text-gray-700 leading-relaxed">{review.text}</p>
             </div>
           ))}
         </div>
@@ -178,13 +178,13 @@ export default function Reviews() {
             href="https://www.google.com/search?q=melken+handyman+solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold mr-4"
+            className="inline-block px-10 py-4 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold text-lg mr-4 mb-4"
           >
             Read More Reviews on Google
           </a>
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold"
+            className="inline-block px-10 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-semibold text-lg"
           >
             Get Your Free Estimate
           </a>

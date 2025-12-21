@@ -22,19 +22,19 @@ export default function Hero() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Dependable handyman help from a veteran-owned business built on craftsmanship and trust.
             </h1>
 
             {/* Service Areas */}
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Seminole County, Florida | Orange County, Florida
             </p>
 
             {/* CTA Button */}
             <a
               href="#contact"
-              className="inline-block px-8 py-4 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-lg shadow-md"
+              className="inline-block px-10 py-5 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-xl shadow-md"
             >
               Get an Estimate
             </a>

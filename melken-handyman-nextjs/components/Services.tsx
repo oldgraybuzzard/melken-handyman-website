@@ -21,20 +21,20 @@ export default function Services() {
   return (
     <section id="services" className="py-16 bg-white">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-gray-900">
           Services offered
         </h2>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-4 p-5 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                <Check className="w-4 h-4 text-white" strokeWidth={3} />
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
-              <span className="text-gray-800 font-medium">{service}</span>
+              <span className="text-gray-800 font-medium text-lg">{service}</span>
             </div>
           ))}
         </div>

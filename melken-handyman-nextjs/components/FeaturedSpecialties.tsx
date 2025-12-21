@@ -25,7 +25,7 @@ export default function FeaturedSpecialties() {
   return (
     <section className="py-16 bg-white">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-12">
           Our specialties
         </h2>
 
@@ -35,11 +35,11 @@ export default function FeaturedSpecialties() {
               key={index}
               className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <div className="text-5xl mb-4">{specialty.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="text-6xl mb-4">{specialty.icon}</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 {specialty.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 {specialty.description}
               </p>
             </div>

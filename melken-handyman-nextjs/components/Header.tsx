@@ -37,17 +37,17 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary font-medium transition-colors"
+                className="text-gray-700 hover:text-primary font-medium transition-colors text-lg"
               >
                 {link.label}
               </a>
             ))}
-            <a href="tel:4075020253" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <a href="tel:4075020253" className="text-gray-700 hover:text-primary font-medium transition-colors text-lg">
               (407) 502-0253
             </a>
             <a
               href="#contact"
-              className="px-6 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold"
+              className="px-8 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold text-lg"
             >
               Get an Estimate
             </a>
@@ -74,7 +74,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+                className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -82,14 +82,14 @@ export default function Header() {
             ))}
             <a
               href="tel:4075020253"
-              className="block py-3 text-gray-700 hover:text-primary font-medium px-4"
+              className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
               (407) 502-0253
             </a>
             <a
               href="#contact"
-              className="block py-3 text-primary font-semibold px-4"
+              className="block py-4 text-primary font-semibold px-4 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get an Estimate

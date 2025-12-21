@@ -39,11 +39,11 @@ export default function ContactForm() {
 
   return (
     <section id="contact" className="py-16 bg-white">
-      <div className="container max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
+      <div className="container max-w-6xl">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-gray-900">
           Get an Estimate
         </h2>
-        <p className="text-center text-gray-600 mb-12">
+        <p className="text-center text-gray-600 text-xl mb-12">
           Fill out the form below and we'll get back to you shortly
         </p>
 
