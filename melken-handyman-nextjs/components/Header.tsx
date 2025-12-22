@@ -42,8 +42,8 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a href="tel:4075020253" className="text-gray-700 hover:text-primary font-medium transition-colors text-lg">
-              (407) 502-0253
+            <a href="tel:3213267555" className="text-gray-700 hover:text-primary font-medium transition-colors text-lg">
+              (321) 326-7555
             </a>
             <a
               href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"
@@ -85,11 +85,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="tel:4075020253"
+              href="tel:3213267555"
               className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              (407) 502-0253
+              (321) 326-7555
             </a>
             <a
               href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"

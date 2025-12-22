@@ -57,10 +57,10 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-2 text-gray-400">
               <a
-                href="tel:4075020253"
+                href="tel:3213267555"
                 className="block hover:text-white transition-colors"
               >
-                (407) 502-0253
+                (321) 326-7555
               </a>
               <button
                 onClick={handleEmailClick}

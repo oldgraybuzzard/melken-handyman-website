@@ -174,8 +174,8 @@ export async function POST(request: Request) {
 ## 📞 Support
 
 For questions or issues, contact:
-- **Email**: kfelder@melkenhandyman.com
-- **Phone**: (407) 502-0253
+- **Email**: theguy@melkenhandyman.com
+- **Phone**: (321) 326-7555
 
 ## 📄 License
 
