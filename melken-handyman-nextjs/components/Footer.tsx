@@ -4,8 +4,8 @@ import { Facebook } from 'lucide-react';
 
 export default function Footer() {
   const handleEmailClick = () => {
-    // Protected email - constructed at runtime
-    const user = 'kfelder';
+    // Protected email - constructed at runtime to avoid bot scraping
+    const user = 'theguy';
     const domain = 'melkenhandyman.com';
     window.location.href = `mailto:${user}@${domain}`;
   };
@@ -64,9 +64,10 @@ export default function Footer() {
               </a>
               <button
                 onClick={handleEmailClick}
-                className="block hover:text-white transition-colors text-left"
+                className="block hover:text-white transition-colors text-left focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Send email to Melken Handyman Solutions"
               >
-                kfelder@melkenhandyman.com
+                Click to Email
               </button>
               <a
                 href="https://clienthub.getjobber.com/client_hubs/b44c6628-bedb-4fef-ba53-8a664d11ed6f/login/new?source=share_login"
