@@ -48,7 +48,7 @@ export default function ContactForm() {
         </p>
 
         {/* Jobber Embedded Form - Wider container for better visibility */}
-        <div className="max-w-4xl mx-auto mb-20">
+        <div className="max-w-5xl mx-auto mb-32" style={{ minHeight: '1600px' }}>
           <div
             id="b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366"
             className="jobber-form-container"
