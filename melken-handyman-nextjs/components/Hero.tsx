@@ -130,7 +130,7 @@ export default function Hero() {
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-gray-600 mb-1">Ready to help</p>
+                    <p className="text-sm text-gray-600 mb-1">Call us today</p>
                     <p className="text-2xl font-bold text-primary">(321) 326-7555</p>
                   </div>
                   <a
