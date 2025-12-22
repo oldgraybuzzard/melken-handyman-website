@@ -90,7 +90,7 @@ export default function Hero() {
                   <Clock className="w-5 h-5 text-primary" />
                   <p className="font-bold text-2xl text-gray-900">Fast</p>
                 </div>
-                <p className="text-sm text-gray-600">Same-day service</p>
+                <p className="text-sm text-gray-600">Emergency available</p>
               </div>
               <div className="text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
