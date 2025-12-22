@@ -63,7 +63,9 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full px-8 py-5 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"
+                  className="w-full px-8 py-5 flex items-center justify-between text-left hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${faq.id}`}
                 >
                   <span className="font-semibold text-gray-900 pr-4 text-xl">
                     {faq.question}
@@ -72,11 +74,16 @@ export default function FAQ() {
                     className={`h-6 w-6 text-gray-600 flex-shrink-0 transition-transform ${
                       isOpen ? 'rotate-180' : ''
                     }`}
+                    aria-hidden="true"
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-8 pb-5 text-gray-700 text-lg leading-relaxed whitespace-pre-line">
+                  <div
+                    id={`faq-answer-${faq.id}`}
+                    className="px-8 pb-5 text-gray-700 text-lg leading-relaxed whitespace-pre-line"
+                    role="region"
+                  >
                     {faq.answer}
                   </div>
                 )}

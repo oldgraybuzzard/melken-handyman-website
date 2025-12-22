@@ -55,26 +55,28 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X className="h-6 w-6 text-gray-700" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu className="h-6 w-6 text-gray-700" aria-hidden="true" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-gray-200">
+          <nav id="mobile-menu" className="lg:hidden py-4 border-t border-gray-200">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg"
+                className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -82,14 +84,14 @@ export default function Header() {
             ))}
             <a
               href="tel:4075020253"
-              className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg"
+              className="block py-4 text-gray-700 hover:text-primary font-medium px-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               (407) 502-0253
             </a>
             <a
               href="#contact"
-              className="block py-4 text-primary font-semibold px-4 text-lg"
+              className="block py-4 text-primary font-semibold px-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get an Estimate

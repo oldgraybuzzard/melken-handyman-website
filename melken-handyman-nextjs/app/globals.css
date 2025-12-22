@@ -68,6 +68,30 @@
   border: none !important;
 }
 
+/* Accessibility - Focus Styles */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1f3b4d;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #1f3b4d;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1em;
+}
+
 
 
 

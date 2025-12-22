@@ -113,18 +113,18 @@ export default function Reviews() {
         </h2>
 
         {/* Google Rating Badge */}
-        <div className="flex items-center justify-center gap-4 mb-12">
+        <div className="flex items-center justify-center gap-4 mb-12" role="img" aria-label={`${rating.toFixed(1)} star rating based on ${totalReviews} plus Google reviews`}>
           <div className="flex items-center gap-3">
-            <span className="text-5xl font-bold text-gray-900">{rating.toFixed(1)}</span>
+            <span className="text-5xl font-bold text-gray-900" aria-hidden="true">{rating.toFixed(1)}</span>
             <div>
-              <div className="flex gap-1">
+              <div className="flex gap-1" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-7 h-7 text-yellow-400 fill-current" viewBox="0 0 20 20">
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
               </div>
-              <p className="text-lg text-gray-600 mt-1">Based on {totalReviews}+ Google Reviews</p>
+              <p className="text-lg text-gray-600 mt-1" aria-hidden="true">Based on {totalReviews}+ Google Reviews</p>
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Reviews() {
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {reviews.map((review, index) => (
-            <div
+            <article
               key={index}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
             >
@@ -141,34 +141,35 @@ export default function Reviews() {
                 {review.profilePhoto ? (
                   <img
                     src={review.profilePhoto}
-                    alt={review.author}
+                    alt={`${review.author}'s profile photo`}
                     className="w-12 h-12 rounded-full flex-shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-semibold flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-semibold flex-shrink-0" aria-label={`${review.author}'s initials`}>
                     {review.initials}
                   </div>
                 )}
                 <div className="flex-1">
                   <p className="font-semibold text-gray-900">{review.author}</p>
-                  <div className="flex gap-1 mt-1">
+                  <div className="flex gap-1 mt-1" role="img" aria-label={`${review.rating} out of 5 stars`}>
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
                         className={`w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'} fill-current`}
                         viewBox="0 0 20 20"
+                        aria-hidden="true"
                       >
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-gray-500">{review.timeAgo}</p>
+                <time className="text-sm text-gray-500">{review.timeAgo}</time>
               </div>
 
               {/* Review Text */}
               <p className="text-lg text-gray-700 leading-relaxed">{review.text}</p>
-            </div>
+            </article>
           ))}
         </div>
 

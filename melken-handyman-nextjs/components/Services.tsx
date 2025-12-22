@@ -25,19 +25,19 @@ export default function Services() {
           Services offered
         </h2>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ul className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
           {services.map((service, index) => (
-            <div
+            <li
               key={index}
               className="flex items-center gap-4 p-5 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center" aria-hidden="true">
                 <Check className="w-5 h-5 text-white" strokeWidth={3} />
               </div>
               <span className="text-gray-800 font-medium text-lg">{service}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -10,15 +10,15 @@ export default function Hero() {
           {/* Left Column - Text Content */}
           <div className="text-center md:text-left">
             {/* Google Rating Badge */}
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
-              <div className="flex items-center gap-1">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-6" role="img" aria-label="5.0 star rating on Google">
+              <div className="flex items-center gap-1" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
               </div>
-              <span className="text-gray-700 font-semibold">5.0</span>
+              <span className="text-gray-700 font-semibold" aria-hidden="true">5.0</span>
             </div>
 
             {/* Main Heading */}

@@ -31,18 +31,18 @@ export default function FeaturedSpecialties() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {specialties.map((specialty, index) => (
-            <div
+            <article
               key={index}
               className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <div className="text-6xl mb-4">{specialty.icon}</div>
+              <div className="text-6xl mb-4" role="img" aria-label={`${specialty.title} icon`}>{specialty.icon}</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 {specialty.title}
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
                 {specialty.description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
