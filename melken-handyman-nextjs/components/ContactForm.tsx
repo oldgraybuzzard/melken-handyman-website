@@ -38,7 +38,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white pb-40">
       <div className="container">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-gray-900">
           Get an Estimate
@@ -47,8 +47,8 @@ export default function ContactForm() {
           Fill out the form below and we'll get back to you shortly
         </p>
 
-        {/* Jobber Embedded Form - Wider container for better visibility */}
-        <div className="max-w-5xl mx-auto mb-32" style={{ minHeight: '1600px' }}>
+        {/* Jobber Embedded Form - Fixed height wrapper to prevent footer overlap */}
+        <div className="max-w-5xl mx-auto" style={{ minHeight: '2000px', paddingBottom: '200px' }}>
           <div
             id="b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366"
             className="jobber-form-container"

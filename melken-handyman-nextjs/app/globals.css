@@ -52,23 +52,22 @@
 /* Jobber Embedded Form Styling - Keep users on site */
 .jobber-form-container {
   width: 100% !important;
-  min-height: 1400px !important;
-  font-size: 18px !important;
+  min-height: 1800px !important;
+  padding-bottom: 300px !important;
 }
 
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 {
   width: 100% !important;
-  min-height: 1400px !important;
+  min-height: 1800px !important;
+  padding-bottom: 300px !important;
 }
 
 #b44c6628-bedb-4fef-ba53-8a664d11ed6f-1957366 iframe {
   width: 100% !important;
-  min-height: 1400px !important;
+  min-height: 1800px !important;
   border: none !important;
-  /* Zoom the iframe content to make it larger */
-  zoom: 1.4;
-  -moz-transform: scale(1.4);
-  -moz-transform-origin: 0 0;
+  display: block !important;
+  margin-bottom: 300px !important;
 }
 
 
