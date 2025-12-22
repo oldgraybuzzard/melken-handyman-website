@@ -46,10 +46,12 @@ export default function Header() {
               (407) 502-0253
             </a>
             <a
-              href="#contact"
+              href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors font-semibold text-lg"
             >
-              Get an Estimate
+              Book Now
             </a>
           </nav>
 
@@ -90,11 +92,13 @@ export default function Header() {
               (407) 502-0253
             </a>
             <a
-              href="#contact"
+              href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block py-4 text-primary font-semibold px-4 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get an Estimate
+              Book Now
             </a>
           </nav>
         )}

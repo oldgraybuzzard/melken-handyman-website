@@ -99,6 +99,14 @@ export default function Footer() {
               <a href="#contact" className="block hover:text-white transition-colors">
                 Contact
               </a>
+              <a
+                href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-white transition-colors font-semibold"
+              >
+                Book Now
+              </a>
             </div>
           </div>
 

@@ -31,13 +31,23 @@ export default function Hero() {
               Seminole County, Florida | Orange County, Florida
             </p>
 
-            {/* CTA Button */}
-            <a
-              href="#contact"
-              className="inline-block px-10 py-5 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-xl shadow-md"
-            >
-              Get an Estimate
-            </a>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a
+                href="https://clienthub.getjobber.com/booking/5c634966-cdc4-461c-b15d-852bce0ed9ca"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-5 bg-[#1f3b4d] text-white rounded-lg hover:bg-[#152a38] transition-colors font-semibold text-xl shadow-md"
+              >
+                Book Now
+              </a>
+              <a
+                href="#contact"
+                className="inline-block px-10 py-5 bg-white text-[#1f3b4d] border-2 border-[#1f3b4d] rounded-lg hover:bg-gray-50 transition-colors font-semibold text-xl shadow-md"
+              >
+                Get an Estimate
+              </a>
+            </div>
           </div>
 
           {/* Right Column - Hero Image */}
